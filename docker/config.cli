@@ -1,0 +1,3 @@
+embed-server --std-out=echo
+data-source add --name=ExaminationDS --jndi-name=java:jboss/datasources/ExaminationDS --use-java-context=true --driver-name=h2 --connection-url=jdbc:h2:tcp://localhost/~/exam --user-name=sa --password=sa --spy=true --pool-prefill=true --min-pool-size=10 --max-pool-size=20
+deploy supplier.war
