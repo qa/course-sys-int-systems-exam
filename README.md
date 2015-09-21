@@ -78,11 +78,13 @@ If the total order price is either zero or less or over 1000 then it rejects inv
 * Server certificate located at `docker/keystore.jks`
 * Secured by basic authentication with credentials `webuser/JBoss.123`
 #### Loaded data
+
 |SKU    | Price | Amount |
 |-------|-------|--------|
 |fedora | 10    | 10     |
 |rhel   | 1000  | 5      |
 |ubuntu | 2     | 50     |
+
 #### Behaviour
 If SKU does not exist then a fault is thrown. If amount queried is greater than available then the `false` is returned.
 
@@ -92,10 +94,12 @@ If SKU does not exist then a fault is thrown. If amount queried is greater than 
 * Server certificate located at `docker/keystore.jks`
 * Secured by https client authentication, use `docker/keystore.jks`
 #### Loaded data
+
 |SKU    | Price | Amount |
 |-------|-------|--------|
 |fedora | 10    | 20     |
 |rhel   | 100   | 200    |
 |ubuntu | 300   | 28     |
+
 #### Behaviour
 If SKU does not exist then a fault is thrown. If amount queried is greater than available then the `false` is returned.
