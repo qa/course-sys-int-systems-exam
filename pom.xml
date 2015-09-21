@@ -6,9 +6,8 @@
 
 	<groupId>com.redhat.brq.integration</groupId>
 	<artifactId>examination</artifactId>
-	<packaging>war</packaging>
 	<version>1.0.0-SNAPSHOT</version>
-
+	<packaging>pom</packaging>
 	<name>Integration systems for examination</name>
 
 	<properties>
@@ -18,9 +17,8 @@
 		<version.plugin.compiler>3.3</version.plugin.compiler>
 		<version.plugin.war>2.6</version.plugin.war>
 		<version.plugin.clean>2.6.1</version.plugin.clean>
+		<version.plugin.ear>2.10.1</version.plugin.ear>
 	</properties>
-	<repositories>
-	</repositories>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -29,6 +27,11 @@
 				<version>${version.org.wildfly.bom}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.ws</groupId>
+				<artifactId>jbossws-api</artifactId>
+				<version>${version.org.jboss.ws.api}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -79,6 +82,10 @@
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>${version.plugin.clean}</version>
 				</plugin>
+				<plugin>
+					<artifactId>maven-ear-plugin</artifactId>
+					<version>${version.plugin.ear}</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
@@ -88,14 +95,6 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-					<warName>supplier</warName>
-					<outputDirectory>docker</outputDirectory>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -114,4 +113,11 @@
 			</plugin>
 		</plugins>
 	</build>
+	<modules>
+		<module>accounting</module>
+		<module>common</module>
+		<module>ear</module>
+		<module>supplier-a</module>
+		<module>supplier-b</module>
+	</modules>
 </project>

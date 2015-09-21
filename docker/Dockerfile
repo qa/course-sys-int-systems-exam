@@ -1,8 +1,8 @@
 FROM fedora
 WORKDIR /root
 RUN dnf install -y java-1.8.0-openjdk-devel unzip git maven wget
-RUN http://download.jboss.org/wildfly/9.0.1.Final/wildfly-9.0.1.Final.zip -o wildfly.zip
-RUN unzip zips/wildfly.zip
+RUN wget -O wildfly.zip http://download.jboss.org/wildfly/9.0.1.Final/wildfly-9.0.1.Final.zip
+RUN unzip wildfly.zip
 ADD launch.sh launch.sh
 ADD config.cli config.cli
 ADD supplier.war supplier.war
