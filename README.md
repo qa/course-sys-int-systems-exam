@@ -1,6 +1,6 @@
 # course-sys-int-systems-exam
 
-This project is serves as a context for the A4M36ISS course examination projects. It proivdes a standalone Docker file which simulates multiple information integrations that should be integrated in the workflow defined by an [assignment](https://developer.jboss.org/wiki/SystemIntegrationWithJBoss#jive_content_id_Zvren_prce).
+This project serves as a context for the A4M36ISS course examination projects. It provides a standalone Docker file which simulates multiple information integrations that should be integrated in the workflow defined by an [assignment](https://developer.jboss.org/wiki/SystemIntegrationWithJBoss#jive_content_id_Zvren_prce).
 The Docker image is published at [Docker Hub](https://hub.docker.com/r/jpechane/course-sys-int-systems/).
 
 ## How to run
