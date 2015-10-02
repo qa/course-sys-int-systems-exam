@@ -17,7 +17,7 @@ The Docker image is published at [Docker Hub](https://hub.docker.com/r/jpechane/
  * JDBC URL `jdbc:h2:tcp://localhost/~/exam`
  * Credentials `sa/sa`
  * Driver version `1.3.173`
-* Use command `java -jar h2-1.3.173.jar` (or any other JDBC viewer) to run web GUI and analyze the structure and the content of the table
+* Use command `java -jar h2-1.3.173.jar` ([link](http://central.maven.org/maven2/com/h2database/h2/1.3.173/h2-1.3.173.jar)) - or any other JDBC viewer - to run web GUI and analyze the structure and the content of the table
 
 ### Accounting
 #### Input
@@ -77,6 +77,7 @@ If the total order price is either zero or less or over 1000 then it rejects inv
 * http://localhost:8080/supplier-a/SupplierAService?wsdl
 * Server certificate located at `docker/keystore.jks`
 * Secured by basic authentication with credentials `webuser/JBoss.123`
+
 #### Loaded data
 
 |SKU    | Price | Amount |
@@ -93,6 +94,7 @@ If SKU does not exist then a fault is thrown. If amount queried is greater than 
 * http://localhost:8080/supplier-b/SupplierBService?wsdl
 * Server certificate located at `docker/keystore.jks`
 * Secured by https client authentication, use `docker/keystore.jks`
+
 #### Loaded data
 
 |SKU    | Price | Amount |
