@@ -13,7 +13,7 @@ The Docker image is published at [Docker Hub](https://hub.docker.com/r/jpechane/
 ## Service endpoints exposed
 ### Inventory
 #### Query
-* H2 Database table `INVENTORYTABLE`
+* H2 Database table `ITEM`
  * JDBC URL `jdbc:h2:tcp://localhost/~/exam`
  * Credentials `sa/sa`
  * Driver version `1.3.173`
