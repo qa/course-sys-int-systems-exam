@@ -4,7 +4,7 @@ This project serves as a context for the A4M36ISS course examination projects. I
 The Docker image is published at [Docker Hub](https://hub.docker.com/r/jpechane/course-sys-int-systems/).
 
 ## How to run
-``docker run -it -p 9092:9092 -p 8080:8080 -p 8443:8443 jpechane/course-sys-int-systems``
+``docker run -it -p 8082:8082 -p 9092:9092 -p 8080:8080 -p 8443:8443 jpechane/course-sys-int-systems``
 
 ## How to build
 ``mvn clean install``
